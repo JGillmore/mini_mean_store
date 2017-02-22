@@ -1,0 +1,25 @@
+<h2>Add new order</h2>
+<div >
+  Customer: {{loggedIn.first_name}} {{loggedIn.last_name}}</br>
+    <br>
+  Order: <select ng-model='newOrder.count'>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+  </select>
+
+  <select ng-model='newOrder.item' ng-options='item.name for item in items'>
+  </select><br>
+  <br>
+  <button ng-click=Order()>Order</button>
+</div>
+
+<div>
+  <ul>
+    <li>| Customer Name | Product | Quantity | Date |</li>
+    <li ng-repeat='order in orders'>{{order.user.first_name}} | {{order.item.name}} | {{order.item.count}} | {{order.createdAt | date: "short"}}
+  </ul>
+
+</div>

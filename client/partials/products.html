@@ -1,0 +1,13 @@
+<h2>Add new product</h2>
+
+Name: <input ng-model= 'newProduct.name'><br><br><br>
+Image(url): <input ng-model='newProduct.imageUrl'><br><br><br>
+Descriprion: <textarea  rows="10" cols="50" ng-model='newProduct.description'></textarea><br><br><br>
+Initial Quanity: <input type="text" ng-model='newProduct.count'><br><br><br>
+<button ng-click='createProduct()'>Create</button><br><br>
+
+<div style="display:inline-block;vertical-align:top;" ng-repeat="item in items">
+  <img style="height:200px;width:300px;" ng-src="{{item.imageUrl}}"><br>
+  {{item.name}}<br>
+  ({{item.count}} left)
+</div>

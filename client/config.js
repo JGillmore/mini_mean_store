@@ -1,9 +1,17 @@
-var app = angular.module("{{template}}", ["ngRoute"]);
+var app = angular.module("app", ["ngRoute"]);
 
 app.config(function ($routeProvider) {
     $routeProvider.when("/", {
-        templateUrl: "partials/{{template}}.html",
-        controller: "{{template}}Controller"
+        templateUrl: "partials/index.html",
+        controller: "DashboardController"
+    }).when("/customers", {
+      templateUrl: "partials/customers.html",
+      controller: "CustomerController"
+    }).when("/orders", {
+      templateUrl: "partials/orders.html",
+      controller: "OrderController"
+    }).when("/products", {
+      templateUrl: "partials/products.html",
+      controller: "ItemController"
     })
-
 });
