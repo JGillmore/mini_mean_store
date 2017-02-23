@@ -1,15 +1,19 @@
-<html ng-app='{{template}}'>
+<html ng-app='app'>
 <head>
   <meta charset='utf-8'>
-  <title>{{template}}</title>
+  <title>Mean Store</title>
   <script src="angular/angular.js"></script>
   <script src="angular-route/angular-route.js"></script>
   <script src="config.js"></script>
-  <script src="factories/{{template}}.js"></script>
-  <script src="controllers/{{template}}.js"></script>
+  <script src="factories/User.js"></script>
+  <script src="factories/Item.js"></script>
+  <script src="factories/Order.js"></script>
+  <script src="controllers/dashboard.js"></script>
+  <script src="controllers/order.js"></script>
+  <script src="controllers/item.js"></script>
 </head>
 <body>
-  <h1><a href='#!'>Home</a></h1>
+  <h2><a href='#!'>Dashboard</a> | <a href='#!/products'>Products</a> | <a href='#!/orders'>Orders</a></h2>
   <div ng-view="">
   </div>
 </body>
